@@ -14,7 +14,7 @@ R is a statistical computing language. It has lots of good built-in functions fo
 # You can't make a multi-line comment per se,
 # but you can stack multiple comments like so.
 
-# Hit COMMAND-ENTER to execute a line
+# in Windows hit COMMAND-ENTER to execute a line
 
 #########################
 # The absolute basics
@@ -22,25 +22,29 @@ R is a statistical computing language. It has lots of good built-in functions fo
 
 # NUMBERS
 
-# We've got doubles! Behold the "numeric" class
+# Double-precision integers are "numeric"
 5 # => [1] 5
 class(5) # => [1] "numeric"
 # We've also got integers! They look suspiciously similar,
 # but indeed are different
 5L # => [1] 5
 class(5L) # => [1] "integer"
-# Try ?class for more information on the class() function
-# In fact, you can look up the documentation on just about anything with ?
+# Try ?class for more information on the `class()` function
+# In fact, you can look up the documentation on `xyz` with ?xyz
+# or see the source code of `xyz` by running xyz
 
-# All the normal operations!
+# All the normal operations
 10 + 66 # => [1] 76
 53.2 - 4 # => [1] 49.2
 2 * 2.0 # => [1] 4
 3L / 4 # => [1] 0.75
 3 %% 2 # => [1] 1
 
-# Finally, we've got not-a-numbers! They're numerics too
+# Finally, R has several "weird" numbers
 class(NaN) # => [1] "numeric"
+class(Inf) # => [1] "numeric"		#used in, for example: integrate(dnorm(x), 3, Inf))
+class(-Inf) # => [1] "numeric"
+class(NULL) # => [1] "NULL"
 
 # CHARACTERS
 
